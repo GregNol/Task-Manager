@@ -101,7 +101,7 @@ class TaskManager:
         logger.info(f'Обновлена задача с id {task_id}')
         return model.to_domain()
 
-    async def create_task(self, task: domain.Task) -> domain.TaskRecord:
+    async def add_task(self, task: domain.Task) -> domain.TaskRecord:
         """
         task: domain.Task - задача для создания (без id)
         return: domain.TaskRecord - созданная задача с id и полями времени

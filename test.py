@@ -21,7 +21,7 @@ async def main():
             description="This is a sample task.",
             status=domain.Status.TODO
         )
-        created = await task_manager.create_task(new_task)
+        created = await task_manager.add_task(new_task)
         print(f"Created task id={created.id}, status={created.status}")
 
         # 3) get all tasks again
